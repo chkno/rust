@@ -8,6 +8,6 @@ fn clone_thing(nc: &NotClone) -> NotClone {
     //~^ NOTE expected `NotClone` because of return type
     nc.clone()
     //~^ ERROR mismatched type
-    //~| NOTE `NotClone` does not implement `Clone`, so `&NotClone` was cloned instead
+    //~| NOTE `NotClone` does not implement `Clone`, so `&NotClone` was cloned instead.  Consider using NotClone::clone() explicitly.
     //~| NOTE expected `NotClone`, found `&NotClone`
 }

@@ -1444,7 +1444,7 @@ impl<'a, 'tcx> FnCtxt<'a, 'tcx> {
             diag.span_note(
                 callee_expr.span,
                 &format!(
-                    "`{expected_ty}` does not implement `Clone`, so `{found_ty}` was cloned instead"
+                    "`{expected_ty}` does not implement `Clone`, so `{found_ty}` was cloned instead.  Consider using {expected_ty}::clone() explicitly."
                 ),
             );
             let owner = self.tcx.hir().enclosing_body_owner(expr.hir_id);

@@ -7,7 +7,7 @@ LL |
 LL |     nc.clone()
    |     ^^^^^^^^^^ expected `NotClone`, found `&NotClone`
    |
-note: `NotClone` does not implement `Clone`, so `&NotClone` was cloned instead
+note: `NotClone` does not implement `Clone`, so `&NotClone` was cloned instead.  Consider using NotClone::clone() explicitly.
   --> $DIR/explain_clone_autoref.rs:9:5
    |
 LL |     nc.clone()

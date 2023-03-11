@@ -10,7 +10,7 @@ LL |     t.clone()
    |
    = note: expected type parameter `T`
                    found reference `&T`
-note: `T` does not implement `Clone`, so `&T` was cloned instead
+note: `T` does not implement `Clone`, so `&T` was cloned instead.  Consider using T::clone() explicitly.
   --> $DIR/clone-on-unconstrained-borrowed-type-param.rs:3:5
    |
 LL |     t.clone()
